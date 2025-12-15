@@ -13,36 +13,46 @@ body {
 }
 #container {
     padding: 20px;
-    width: 500px;
-    min-height: 500px;
+    width: 90vw;
+    max-width: 500px;
+    max-height: 500px;
     border-radius: 15px;
     border: 2px solid rgb(100, 100, 100);
+    display: flex;
+    flex-direction: column;
 }
 #container_taskForm {
-    display: flex;
-    flex-wrap: wrap;
+    z-index: 2;
+    position: sticky;
+    top: 0;
+    padding-bottom: 10px;
+    background-color: white;
 }
 label {
     font-size: large;
     font-weight: 700;
 }
-label, input {
+input {
+    margin: 20px 0;
     padding: 10px;
     width: 100%;
-}
-input {
     border: 2px solid rgb(100, 100, 100);
     border-radius: 20px;
 }
 button {
-    margin: 10px;
     padding: 5px;
     border-radius: 20px;
     background-color: transparent;
     border: 2px solid rgb(100, 100, 100);
     transition: 0.2s ease-in-out;
 }
+#container_taskView {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-top: 10px;
+}
 .taskView_block {
+    padding: 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -70,4 +80,20 @@ button {
 hr {
     border: 1px solid rgb(200, 200, 200);
     border-radius: 50px;
+}
+
+@media (pointer: coarse) {
+    .taskForm_submitButton {
+        color: green;
+        border: 2px solid green;
+        background-color: white;
+        transition: none;
+    }
+
+    .taskView_eraseButton {
+        color: red;
+        border: 2px solid red;
+        background-color: white;
+        transition: none;
+    }
 }
