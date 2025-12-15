@@ -45,6 +45,7 @@ button {
     background-color: transparent;
     border: 2px solid rgb(100, 100, 100);
     transition: 0.2s ease-in-out;
+    cursor: pointer;
 }
 #container_taskView {
     flex-grow: 1;
