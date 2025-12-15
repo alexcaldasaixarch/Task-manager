@@ -22,6 +22,10 @@ body {
     display: flex;
     flex-wrap: wrap;
 }
+label {
+    font-size: large;
+    font-weight: 700;
+}
 label, input {
     padding: 10px;
     width: 100%;
@@ -38,13 +42,32 @@ button {
     border: 2px solid rgb(100, 100, 100);
     transition: 0.2s ease-in-out;
 }
-button:hover {
+.taskView_block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.taskForm_submitButton:hover {
     color: white;
     border: 2px solid green;
     background-color: green;
 }
-button:active {
+.taskForm_submitButton:active {
     color: green;
     border: 2px solid green;
     background-color: transparent;
+}
+.taskView_eraseButton:hover {
+    color: white;
+    border: 2px solid red;
+    background-color: red;
+}
+.taskView_eraseButton:active {
+    color: red;
+    border: 2px solid red;
+    background-color: transparent;
+}
+hr {
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 50px;
 }
